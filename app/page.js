@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 
 export default function Home() {
@@ -26,8 +27,7 @@ export default function Home() {
         </div>
 
       </section>
-      <section className="bg-yellow-400 h-screen">
-      </section>
+   
     </>
 
   );

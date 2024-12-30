@@ -4,7 +4,7 @@ import Image from 'next/image'
 const Navbar = () => {
 
     return (
-        <nav className="logo bg-white w-[80vw] left-[10vw]  p-3 rounded-xl sticky top-10 flex justify-between items-center ">
+        <nav className="logo bg-white w-[80vw] left-[10vw]  p-3 rounded-xl sticky top-8 flex justify-between items-center ">
             <div className='flex items-center gap-8'>
                 <div className="logo flex items-center">
                     <Image src="/Branchify.png" width={50} height={50} alt='Logo' />
