@@ -1,11 +1,16 @@
 "use client";
 import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useSearchParams } from "next/navigation";
 
 const Generate = () => {
-    const [links, setLinks] = useState([{ link: "", linkText: "" }]);
-    const [handle, sethandle] = useState("");
+    const searchParams = useSearchParams();
+
+    const [links, setLinks] = useState([{ link: "", linktext: "" }]);
+    const [handle, sethandle] = useState(searchParams.get("handle"));
     const [pic, setpic] = useState("");
+    const [desc, setdesc] = useState("");
 
     const handleChange = (index, link, linktext) => {
         setLinks((initialLinks) => {
@@ -20,10 +25,10 @@ const Generate = () => {
     };
 
     const addLink = () => {
-        setLinks(links.concat([{ link: "", linkText: "" }]));
+        setLinks(links.concat([{ link: "", linktext: "" }]));
     };
 
-    const submitLinks = async (text, link, handle) => {
+    const submitLinks = async () => {
         const myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
 
@@ -31,6 +36,7 @@ const Generate = () => {
             links: links,
             handle: handle,
             pic: pic,
+            desc: desc,
         });
 
         console.log(raw);
@@ -44,7 +50,14 @@ const Generate = () => {
 
         const r = await fetch("http://localhost:3000/api/add", requestOptions);
         const result = await r.json();
-        toast(result.message);
+        if (result.success) {
+            toast.success(result.message);
+            setLinks([]);
+            setpic("");
+            sethandle("");
+        } else {
+            toast.error(result.message);
+        }
     };
 
     return (
@@ -111,12 +124,22 @@ const Generate = () => {
                                 type="text"
                                 placeholder="Link your picture"
                             />
+                            <input
+                                value={desc || ""}
+                                onChange={(e) => {
+                                    setdesc(e.target.value);
+                                }}
+                                className="px-4 py-1 rounded-md focus:outline-green-300 w-fit"
+                                type="text"
+                                placeholder="Add a description"
+                            />
 
                             <button
+                                disabled={pic == "" || handle == "" || links[0].linkText == ""}
                                 onClick={() => {
                                     submitLinks();
                                 }}
-                                className="bg-[rgba(233,192,233,255)] px-4 py-1 rounded-md font-semibold w-fit my-5 border border-black"
+                                className="bg-[rgba(233,192,233,255)] px-4 py-1 rounded-md font-semibold w-fit my-5 border border-black "
                             >
                                 Create Branch
                             </button>

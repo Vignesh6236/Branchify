@@ -1,7 +1,18 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+
+  const router = useRouter()
+  const [text, setText] = useState("branchify/")
+  const createTree = () => {
+    router.push(`/generate?handle=${text}`)
+  }
+
+
   return (
     <>
       <section className=" h-screen  bg-purple-500 grid grid-cols-2">
@@ -24,15 +35,16 @@ export default function Home() {
           <div>
             <div className=" flex gap-4 focus:outline-purple-300">
               <input
+                onChange={(e) => setText(e.target.value)}
                 type="text"
                 placeholder="branchify/yourname"
                 className="p-2 rounded"
               />
-              <Link href="/generate">
-                <button className="bg-yellow-300 p-2 rounded font-semibold">
-                  Claim your Branch
-                </button>
-              </Link>
+
+              <button onClick={() => createTree()} className="bg-yellow-300 p-2 rounded font-semibold">
+                Claim your Branch
+              </button>
+
             </div>
           </div>
         </div>
