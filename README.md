@@ -67,7 +67,7 @@ Follow these steps to set up Branchify locally:
     Create a `.env.local` file in the root directory with the following variables:  
 
     ```env  
-    MONGODB_URI=mongodb://localhost:27017/  
+    MONGODB_URI=mongodb://localhost:27017  
     NEXT_PUBLIC_HOST=http://localhost:3000  
     ```  
 
