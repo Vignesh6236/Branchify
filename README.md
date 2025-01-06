@@ -11,6 +11,7 @@
 - [Installation and Usage](#installation-and-usage-)
 - [Examples of Usage](#examples-of-usage-)
 - [Screenshots](#screenshots-)
+- [Deployment](#deployment-)
 - [Contributing](#contributing-)
 - [Acknowledgments](#acknowledgments-)
 
@@ -79,7 +80,17 @@ Follow these steps to set up Branchify locally:
 
 6. **Open the Application:**  
 
-    Access the app at [http://localhost:3000](http://localhost:3000).  
+    Access the app at [http://localhost:3000](http://localhost:3000).
+
+7. **Create Your Branch:**  
+
+    Enter your data (e.g., links, handle, description) on the platform. Once you've entered all your details, click Create Branch, then visit your unique URL:  
+
+    For example, if your handle is `vignesh`, go to:  
+    **[http://localhost:3000/vignesh](http://localhost:3000/vignesh)**  
+
+    Or for the deployed version, visit:  
+    **[https://vignesh-branchify.vercel.app/vignesh](https://vignesh-branchify.vercel.app/vignesh)**  
 
 ## Examples of Usage 📖
 
@@ -89,19 +100,22 @@ Follow these steps to set up Branchify locally:
 
 ## Screenshots 📷
 
-localhost:3000/
+https://vignesh-branchify.vercel.app/
 
 ![Screenshot 2025-01-03 122451](https://github.com/user-attachments/assets/2d69eb87-1376-4bbb-9867-ff889010a9ea)
 
-localhost:3000/generate
+https://vignesh-branchify.vercel.app/generate
 
 ![Screenshot 2025-01-03 122518](https://github.com/user-attachments/assets/63a0826b-b071-4bb8-b99d-122a64f850af)
 
-localhost:3000/vignesh
+https://vignesh-branchify.vercel.app/vignesh
 
 ![Screenshot 2025-01-03 122543](https://github.com/user-attachments/assets/409d841f-b8b1-40a2-b753-23fac9c73063)
 
+## Deployment 🚀
 
+Branchify is deployed using **[Vercel](https://vercel.com/)** for seamless hosting and quick deployment. You can access the live site here:  
+**[https://vignesh-branchify.vercel.app/](https://vignesh-branchify.vercel.app/)**
 
 ## Contributing 🤝
 
@@ -114,5 +128,5 @@ Contributions are welcome! If you have any ideas or improvements, feel free to s
 - **[Tailwind CSS](https://tailwindcss.com/):** For the modern styling capabilities.  
 - **[MongoDB](https://www.mongodb.com/):** For the scalable database solutions.  
 - **[Postman](https://www.postman.com/):** For API testing and documentation.  
-
+- **[Vercel](https://vercel.com/):** For providing seamless deployment and hosting solutions.
 ---
