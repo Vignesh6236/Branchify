@@ -102,15 +102,18 @@ Follow these steps to set up Branchify locally:
 
 https://vignesh-branchify.vercel.app/
 
-![Screenshot 2025-01-03 122451](https://github.com/user-attachments/assets/2d69eb87-1376-4bbb-9867-ff889010a9ea)
+![Screenshot 2025-01-06 143013](https://github.com/user-attachments/assets/d244d6c5-d0ef-4266-99fe-1c6498ba0633)
+
 
 https://vignesh-branchify.vercel.app/generate
 
-![Screenshot 2025-01-03 122518](https://github.com/user-attachments/assets/63a0826b-b071-4bb8-b99d-122a64f850af)
+![Screenshot 2025-01-06 143026](https://github.com/user-attachments/assets/1083db64-b1a8-4fe0-83cb-28d751448fb5)
+
 
 https://vignesh-branchify.vercel.app/vignesh
 
-![Screenshot 2025-01-03 122543](https://github.com/user-attachments/assets/409d841f-b8b1-40a2-b753-23fac9c73063)
+![Screenshot 2025-01-06 143549](https://github.com/user-attachments/assets/26ae566a-1421-4db5-9562-f378e93a9174)
+
 
 ## Deployment 🚀
 
