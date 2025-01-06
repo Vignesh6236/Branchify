@@ -39,7 +39,7 @@ const Generate = () => {
         };
 
         try {
-            const res = await fetch("http://vignesh-branchify.vercel.app/api/add", requestOptions);
+            const res = await fetch("https://vignesh-branchify.vercel.app/api/add", requestOptions);
             const result = await res.json();
 
             if (result.success) {
