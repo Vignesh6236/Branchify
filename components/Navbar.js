@@ -18,12 +18,12 @@ const Navbar = () => {
 
             </div>
             <div className="flex gap-5 items-center">
-                <button className="font-semibold border-2 border-black rounded p-2 text-sm">
-                    Login
-                </button>
-                <button className="font-semibold border-2 border-black rounded p-2 text-sm">
-                    Sign Up
-                </button>
+                <Link href="https://github.com/Vignesh6236/Branchify.git">
+                    <button className="rounded p-2 text-sm">
+                        <img className="w-10" src="github.svg" alt="github icon" />
+                    </button>
+                </Link>
+
             </div>
         </nav>
     );
