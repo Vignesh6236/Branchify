@@ -39,7 +39,10 @@ const Generate = () => {
         };
 
         try {
-            const res = await fetch("https://vignesh-branchify.vercel.app/api/add", requestOptions);
+            const res = await fetch(
+                "https://vignesh-branchify.vercel.app/api/add",
+                requestOptions
+            );
             const result = await res.json();
 
             if (result.success) {
@@ -56,10 +59,10 @@ const Generate = () => {
     };
 
     return (
-        <div className="bg-green-400 min-h-screen grid grid-cols-2 mt-16 text-gray-800">
-            <div className="col1 flex flex-col justify-center items-center gap-10">
+        <div className="bg-green-400 min-h-screen grid min-[1500px]:grid-cols-2 grid-cols-1mt-16 text-gray-800">
+            <div className="col1 flex flex-col justify-center items-center gap-10 mx-auto w-[98vw] min-[1500px]:w-full">
                 <h1 className="font-bold text-4xl">Create your Branch</h1>
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-5 items-center min-[1500px]:items-start">
                     <h2 className="font-semibold text-xl">Step 1: Claim your Handle</h2>
                     <div className="mx-4">
                         <input
@@ -70,9 +73,12 @@ const Generate = () => {
                             placeholder="branchify/yourname"
                         />
                     </div>
-                    <h2 className="font-semibold text-xl">Step 2: Add your Links</h2>
+                    <h2 className="font-semibold text-xl ">Step 2: Add your Links</h2>
                     {links.map((item, index) => (
-                        <div key={index} className="mx-4 flex gap-4">
+                        <div
+                            key={index}
+                            className="mx-4 flex gap-4 flex-col min-[1500px]:flex-row"
+                        >
                             <input
                                 value={item.linktext || ""}
                                 onChange={(e) => handleChange(index, item.link, e.target.value)}
@@ -82,7 +88,9 @@ const Generate = () => {
                             />
                             <input
                                 value={item.link || ""}
-                                onChange={(e) => handleChange(index, e.target.value, item.linktext)}
+                                onChange={(e) =>
+                                    handleChange(index, e.target.value, item.linktext)
+                                }
                                 className="px-4 py-1 rounded-md focus:outline-green-300"
                                 type="text"
                                 placeholder="Enter URL"
@@ -95,7 +103,9 @@ const Generate = () => {
                     >
                         + Add Link
                     </button>
-                    <h2 className="font-semibold text-xl">Step 3: Personalize your Branch</h2>
+                    <h2 className="font-semibold text-xl">
+                        Step 3: Personalize your Branch
+                    </h2>
                     <div className="mx-4 flex flex-col gap-4">
                         <input
                             value={pic || ""}
@@ -121,7 +131,7 @@ const Generate = () => {
                     </div>
                 </div>
             </div>
-            <div className="col2 bg-[rgba(233,192,233,255)] w-full h-full flex justify-center">
+            <div className="col2 bg-[rgba(233,192,233,255)] w-full h-full hidden min-[1500px]:flex justify-center">
                 <img
                     className="h-screen object-contain"
                     src="/generate.png"
