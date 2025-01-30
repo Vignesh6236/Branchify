@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 export default function Home() {
   const router = useRouter();
-  const [text, setText] = useState("branchify/");
+  const [text, setText] = useState("");
   const createTree = () => {
     router.push(`/generate?handle=${text}`);
   };
@@ -46,7 +46,8 @@ export default function Home() {
 
               <button
                 onClick={() => createTree()}
-                className="bg-yellow-300 p-2 rounded font-semibold"
+                className="bg-yellow-300 p-2 rounded font-semibold disabled:cursor-not-allowed"
+                disabled={text.length === 0}
               >
                 Claim your Branch
               </button>
